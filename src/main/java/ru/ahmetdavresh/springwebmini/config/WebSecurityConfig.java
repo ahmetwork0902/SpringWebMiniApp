@@ -1,4 +1,4 @@
-package ru.bobojonov.springwebtestapp.config;
+package ru.ahmetdavresh.springwebmini.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
