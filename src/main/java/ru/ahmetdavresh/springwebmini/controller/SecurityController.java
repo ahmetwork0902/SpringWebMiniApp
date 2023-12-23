@@ -14,7 +14,7 @@ import java.util.List;
 
 @Controller
 public class SecurityController {
-    private UserService userService;
+    private final UserService userService;
     public SecurityController(UserService userService) {
         this.userService = userService;
     }
