@@ -370,3 +370,6 @@ java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supporte
 2023-12-23 18:43:24 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
 The object is already closed [90007-214]
+2023-12-23 22:51:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-214]
