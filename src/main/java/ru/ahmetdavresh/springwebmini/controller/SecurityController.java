@@ -58,4 +58,9 @@ public class SecurityController {
         model.addAttribute("users", users);
         return "users";
     }
+
+    @GetMapping("/about")
+    public String aboutPage() {
+        return "about"; // Это имя представления (например, about.html)
+    }
 }

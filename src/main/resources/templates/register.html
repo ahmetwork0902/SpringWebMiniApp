@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -42,7 +42,7 @@
                     <form method="post" role="form" th:action="@{/register/save}" th:object="${user}">
                         <div class="form-group mb-3">
                             <label class="form-label">Имя пользователя</label>
-                            <input class="form-control" id="firstName" name="firstName" placeholder="Enter first name"
+                            <input class="form-control" id="firstName" name="firstName" placeholder="Введите имя, пример - Иван"
                                 th:field="*{firstName}" type="text" />
                             <p th:errors="*{firstName}" class="text-danger" th:if="${#fields.hasErrors('firstName')}">
                             </p>
@@ -50,21 +50,21 @@
 
                         <div class="form-group mb-3">
                             <label class="form-label">Фамилия пользователя</label>
-                            <input class="form-control" id="lastName" name="lastName" placeholder="Enter last name"
+                            <input class="form-control" id="lastName" name="lastName" placeholder="Введите фамилию, пример - Иванов"
                                 th:field="*{lastName}" type="text" />
                             <p th:errors="*{lastName}" class="text-danger" th:if="${#fields.hasErrors('lastName')}"></p>
                         </div>
 
                         <div class="form-group mb-3">
                             <label class="form-label">Почта</label>
-                            <input class="form-control" id="email" name="email" placeholder="Enter email address"
+                            <input class="form-control" id="email" name="email" placeholder="Введите вашу почту"
                                 th:field="*{email}" type="email" />
                             <p th:errors="*{email}" class="text-danger" th:if="${#fields.hasErrors('email')}"></p>
                         </div>
 
                         <div class="form-group mb-3">
                             <label class="form-label">Пароль</label>
-                            <input class="form-control" id="password" name="password" placeholder="Enter password"
+                            <input class="form-control" id="password" name="password" placeholder="Придумайте пароль"
                                 th:field="*{password}" type="password" />
                             <p th:errors="*{password}" class="text-danger" th:if="${#fields.hasErrors('password')}"></p>
                         </div>
