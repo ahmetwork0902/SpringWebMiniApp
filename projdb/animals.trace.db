@@ -172,3 +172,9 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/ahmet/I
 2023-12-26 04:17:56 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
 The object is already closed [90007-214]
+2023-12-26 04:58:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-214]
+2023-12-26 05:02:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Объект уже закрыт
+The object is already closed [90007-214]
