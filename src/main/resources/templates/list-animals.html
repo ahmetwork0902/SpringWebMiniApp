@@ -34,28 +34,26 @@
 <div class="container">
 
     <hr/>
-    <a th:href="@{/addStudentForm}" class="btn btn-primary">Добавить задачу</a>
+    <a th:href="@{/addAnimalForm}" class="btn btn-primary">Добавить питомца</a>
     <br/><br/>
-    <table class="table table-bordered table-striped" id="studentTable">
+    <table class="table table-bordered table-striped" id="animalTable">
 
         <thead class="table-dark">
         <tr>
-            <th>Имя</th>
-            <th>Фамилия</th>
-            <th>Факультет</th>
+            <th>Имя питомца</th>
+            <th>Вид питомца</th>
             <th>Возраст</th>
             <th>Действие</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="student: ${students}">
-            <td th:text="${student.name}" />
-            <td th:text="${student.surname}" />
-            <td th:text="${student.faculty}" />
-            <td th:text="${student.age}" />
+        <tr th:each="animal: ${animals}">
+            <td th:text="${animal.name}" />
+            <td th:text="${animal.species}" />
+            <td th:text="${animal.age}" />
             <td>
-                <a th:href="@{/showUpdateForm(studentId=${student.id})}" class="btn btn-info">Обновить</a>
-                <a th:href="@{/deleteStudent(studentId=${student.id})}" class="btn btn-danger ml-2">Удалить</a>
+                <a th:href="@{/showAnimalUpdateForm(animalId=${animal.id})}" class="btn btn-info">Обновить</a>
+                <a th:href="@{/deleteAnimal(animalId=${animal.id})}" class="btn btn-danger ml-2">Удалить</a>
             </td>
         </tr>
         </tbody>
@@ -67,7 +65,7 @@
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.js"></script>
 <script>
     $(document).ready(function() {
-        $("#studentTable").DataTable({
+        $("#animalTable").DataTable({
             'aoColumnDefs': [{
                 'bSortable': false,
                 'aTargets': [-1]

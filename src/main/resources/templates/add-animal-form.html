@@ -35,15 +35,19 @@
         <h3>Добавление новой задачи</h3>
         <hr />
 
-        <form th:action="@{/saveStudent}" th:object="${student}" method="POST">
+        <form th:action="@{/saveAnimal}" th:object="${animal}" method="POST">
 
-            <input type="text" th:field="*{name}" class="form-control col-4 mb-4" placeholder="Введите имя, пример - Иван" />
+            <label>
+                <input type="text" th:field="*{name}" class="form-control col-4 mb-4" placeholder="Введите имя, пример - Иван" />
+            </label>
 
-            <input type="text" th:field="*{surname}" class="form-control col-4 mb-4" placeholder="Введите фамилию, пример - Иванов" />
+            <label>
+                <input type="text" th:field="*{species}" class="form-control col-4 mb-4" placeholder="Введите фамилию, пример - Иванов" />
+            </label>
 
-            <input type="text" th:field="*{faculty}" class="form-control col-4 mb-4" placeholder="Enter Faculty" />
-
-            <input type="text" th:field="*{age}" class="form-control col-4 mb-4" placeholder="Enter Age" />
+            <label>
+                <input type="text" th:field="*{age}" class="form-control col-4 mb-4" placeholder="Enter Age" />
+            </label>
 
             <button type="submit" class="btn btn-primary col-2">Сохранить</button>
 
@@ -51,7 +55,7 @@
 
         </form>
         <hr />
-        <a th:href="@{/list}">К задачам</a>
+        <a th:href="@{/list}">К питомцам</a>
     </div>
 
 </body>

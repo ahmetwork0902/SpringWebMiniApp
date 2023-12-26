@@ -61,6 +61,6 @@ public class SecurityController {
 
     @GetMapping("/about")
     public String aboutPage() {
-        return "about"; // Это имя представления (например, about.html)
-    }
+        return "about";
+}
 }

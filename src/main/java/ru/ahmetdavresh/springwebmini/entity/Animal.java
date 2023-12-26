@@ -6,27 +6,24 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "STUDENTS")
-public class Student {
+@Table(name = "ANIMALS")
+public class Animal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private long id;
+    private Long id;
 
-    @Column(name = "name")
     private String name;
-
-    @Column(name = "surname")
-    private String surname;
-
-    @Column(name = "faculty")
-    private String faculty;
-
-    @Column(name = "age")
+    private String species;
     private int age;
+
+    @OneToMany(mappedBy = "animal", cascade = CascadeType.ALL)
+    private List<Expense> expenses = new ArrayList<>();
 }

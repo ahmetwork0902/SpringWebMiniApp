@@ -8,7 +8,6 @@ import ru.ahmetdavresh.springwebmini.entity.User;
 import ru.ahmetdavresh.springwebmini.entity.Role;
 import ru.ahmetdavresh.springwebmini.repository.RoleRepository;
 import ru.ahmetdavresh.springwebmini.repository.UserRepository;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -35,7 +34,7 @@ public class UserServiceImpl implements UserService {
         if (role == null) {
             role = checkRoleExist();
         }
-        user.setRoles(Arrays.asList(role));
+        user.setRoles(List.of(role));
         userRepository.save(user);
     }
 
@@ -47,7 +46,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserDto> findAllUsers() {
         List<User> users = userRepository.findAll();
-        return users.stream().map((user) -> mapToUserDto(user)).collect(Collectors.toList());
+        return users.stream().map(this::mapToUserDto).collect(Collectors.toList());
     }
 
     private UserDto mapToUserDto(User user) {
