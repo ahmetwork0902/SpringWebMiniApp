@@ -9,10 +9,10 @@
     <link rel="icon" type="image/x-icon" href="/icons/icon-pets.ico">
     <style>
         table {
-            background-color: #FFE4B5; /* Светло-оранжевый цвет фона таблицы */
+            background-color: #FFE4B5;
         }
         th, td {
-            background-color: #FFDAB9; /* Светло-оранжевый цвет фона ячеек */
+            background-color: #FFDAB9;
         }
     </style>
 </head>
@@ -27,10 +27,12 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" th:href="@{/list}">Задачи</a>
+                    <a class="nav-link active" aria-current="page" th:href="@{/list}">Список питомцев</a>
                 </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" th:href="@{/logout}">Выход</a>
                 </li>
@@ -40,7 +42,7 @@
 </nav>
 <div class="container">
     <div class="row col-md-10">
-        <h2>Список зарегистрированных пользователей</h2>
+        <h2 class="text-center">Список зарегистрированных пользователей</h2>
     </div>
     <table class="table table-bordered table-hover">
         <thead class="table-dark">
